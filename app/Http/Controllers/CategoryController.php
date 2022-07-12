@@ -75,7 +75,7 @@ class CategoryController extends ApiController
      */
     public function update($id, Request $request)
     {
-
+        return $this->sendResponse(Category::ubdate($request)->all());
     }
 
     /**
@@ -83,6 +83,6 @@ class CategoryController extends ApiController
      */
     public function delete($id)
     {
-        return $this->sendResponse(Category::find($delete));
+        return $this->sendResponse(Category::find($id)->delete());
     }
 }
