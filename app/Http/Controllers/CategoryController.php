@@ -75,7 +75,7 @@ class CategoryController extends ApiController
      */
     public function update($id, Request $request)
     {
-        return $this->sendResponse(Category::ubdate($request)->all());
+        return $this->sendResponse(Category::update($request)->all());
     }
 
     /**
